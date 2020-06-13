@@ -1,9 +1,3 @@
-- Users
--- name
--- email
--- password
--- DP -> Optional
-
 - Tutor
 -- name
 -- email
@@ -22,3 +16,8 @@
 -- Description
 -- Cover photo -> Optional
 -- Introduction Video -> Optional
+
+--> Implement Authentication with JWT
+--> Start making the chat app
+--> Implement Video chat
+--> Hire a bot to monitor the sharing of personal details

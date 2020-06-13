@@ -11,6 +11,7 @@ app.use(express.json());
 // }
 
 //Routes
+app.use("/api/v1", require("./routes/api/indexRouter"));
 
 //Static files
 if (process.env.NODE_ENV == "production") {
