@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+$primary: #1dd1a1;
+$dark: #4b4b4b;
+$text: white;
+$link: hsl(0, 0%, 21%);
+$link-hover: $primary;
+$body-background-color: $dark;
+$strong-color: white;
+
+body {
+  min-height: 100vh;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+}
+
+@import "./bulma-0.8.2/bulma.sass";
+
+th {
+  text-align: center !important;
+  color: white !important;
+}

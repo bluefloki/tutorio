@@ -1,0 +1,24 @@
+- Users
+-- name
+-- email
+-- password
+-- DP -> Optional
+
+- Tutor
+-- name
+-- email
+-- password
+-- phone number
+-- country
+-- languages
+-- qualifications
+-- DP -> Optional
+
+- Classes
+-- title
+-- price
+-- duration
+-- tutor -> fk
+-- Description
+-- Cover photo -> Optional
+-- Introduction Video -> Optional
