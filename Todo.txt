@@ -7,8 +7,10 @@
 -- languages
 -- qualifications
 -- DP -> Optional
+-- rating
+-- category
 
-- Classes
+- Class
 -- title
 -- price
 -- duration
@@ -16,8 +18,17 @@
 -- Description
 -- Cover photo -> Optional
 -- Introduction Video -> Optional
+-- rating
+-- category
+
+- Appointment
+-- TutorId
+-- UserId
+-- appointmentDateTime
+
 
 --> Implement Authentication with JWT
 --> Start making the chat app
 --> Implement Video chat
 --> Hire a bot to monitor the sharing of personal details
+--> Send emails and notifications

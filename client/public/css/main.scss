@@ -1,12 +1,13 @@
 @charset "utf-8";
 
-$primary: #1dd1a1;
+$primary: #3498db;
 $dark: #4b4b4b;
 $text: white;
 $link: hsl(0, 0%, 21%);
 $link-hover: $primary;
 $body-background-color: $dark;
 $strong-color: white;
+$info: #e44236;
 
 body {
   min-height: 100vh;

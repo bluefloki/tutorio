@@ -7,25 +7,25 @@ export default function Navbar() {
       <div className="container">
         <div className="navbar-brand">
           <h1 className="navbar-item is-size-2">
-            <span className="has-text-primary">Tutorio</span>.io
+            <span className="has-text-primary">Tutorio </span>.io
           </h1>
         </div>
         <div className="navbar-menu navbar-end">
           <Link to="/" className="navbar-item">
             Home
           </Link>
-          <Link to="/about" className="navbar-item">
+          {/* <Link to="/about" className="navbar-item">
             About
-          </Link>
+          </Link> */}
           <Link to="/learn" className="navbar-item">
             Learn
           </Link>
           <Link to="/tutors" className="navbar-item">
             Tutors
           </Link>
-          <Link to="/teach" className="navbar-item">
+          {/* <Link to="/teach" className="navbar-item">
             Teach
-          </Link>
+          </Link> */}
           <div className="navbar-item">
             <div className="buttons">
               <Link to="/register" className="button is-primary">

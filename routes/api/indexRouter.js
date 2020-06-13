@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { JSON_SECRET_KEY } = require("./middleware/CheckAuthenticated");
 const User = require("../../database/models").User;
 
 //CREATE USERS
@@ -16,13 +18,14 @@ router.post("/register", async (req, res) => {
   }
 });
 
-//LOGIN TO THE APP
+//USER LOGIN
 router.post("/login", async (req, res) => {
   try {
-    const { password } = req.body;
+    const { email, password } = req.body;
     const user = await User.findOne({ where: { email: req.body.email } });
     if (await bcrypt.compare(password, user.password)) {
-      res.status(201).json(user);
+      const accessToken = jwt.sign({ email }, JSON_SECRET_KEY);
+      res.status(201).json(accessToken);
     } else {
       res.status(400).json({ message: "Incorrect Password" });
     }
@@ -31,5 +34,17 @@ router.post("/login", async (req, res) => {
     res.status(404).json({ message: "Cannot Find User" });
   }
 });
+
+//CREATE TUTOR
+
+//TUTOR LOGIN
+
+//GET ALL TUTORS
+
+//GET ONE TUTOR
+
+//GET ALL CLASSES
+
+//GET ONE CLASS
 
 module.exports = router;
