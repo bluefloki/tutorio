@@ -26,7 +26,18 @@ if (process.env.NODE_ENV == "production") {
 }
 
 io.on("connection", (socket) => {
-  console.log("New web socket connection");
+  socket.on("chatMessage", (msg) => {
+    console.log(msg);
+    io.emit("sentMessage", msg);
+  });
+
+  socket.emit("message", "Hello there react");
+
+  socket.broadcast.emit("message", "A new user has joined the chat");
+
+  socket.on("disconnect", () => io.emit("message", "A user has left the chat"));
+
+  socket.on("message", (message) => console.log(message));
 });
 
 const port = 5000 || process.env.PORT;

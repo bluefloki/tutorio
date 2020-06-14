@@ -15,7 +15,7 @@ export default function SignUp() {
                   Full Name <span className="has-text-info">*</span>
                 </label>
                 <div className="control">
-                  <input class="input" type="text" name="name" />
+                  <input className="input" type="text" name="name" />
                 </div>
               </div>
               <div className="field">
@@ -23,7 +23,7 @@ export default function SignUp() {
                   Email <span className="has-text-info">*</span>
                 </label>
                 <div className="control">
-                  <input class="input" type="text" name="email" />
+                  <input className="input" type="text" name="email" />
                 </div>
               </div>
               <div className="field">
@@ -31,7 +31,7 @@ export default function SignUp() {
                   Password <span className="has-text-info">*</span>
                 </label>
                 <div className="control">
-                  <input class="input" type="password" name="password" />
+                  <input className="input" type="password" name="password" />
                 </div>
               </div>
               <div className="field" style={{ marginTop: 20 }}>

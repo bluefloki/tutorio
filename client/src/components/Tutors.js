@@ -24,7 +24,10 @@ export default function Tutors() {
                     <strong className="has-text-black">Meeran Kazmi</strong>
                   </p>{" "}
                   <br />
-                  <p>Music</p>
+                  <div>
+                    <p className="is-pulled-left">Music</p>
+                    <p className="is-pulled-right">4.0(579)</p>
+                  </div>
                 </div>
               </div>
             </Link>

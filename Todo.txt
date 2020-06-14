@@ -8,7 +8,8 @@
 -- qualifications
 -- DP -> Optional
 -- rating
--- category
+-- categories
+-- Bio
 
 - Class
 -- title
@@ -25,6 +26,19 @@
 -- TutorId
 -- UserId
 -- appointmentDateTime
+
+CATEGORIES
+- Music
+- Software
+- Design
+- Language
+- Fitness
+- Cooking
+- Art
+- Film
+- Business
+- Consultancy
+- Other
 
 
 --> Implement Authentication with JWT

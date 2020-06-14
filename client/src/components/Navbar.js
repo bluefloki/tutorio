@@ -17,8 +17,8 @@ export default function Navbar() {
           {/* <Link to="/about" className="navbar-item">
             About
           </Link> */}
-          <Link to="/learn" className="navbar-item">
-            Learn
+          <Link to="/lessons" className="navbar-item">
+            Lessons
           </Link>
           <Link to="/tutors" className="navbar-item">
             Tutors
