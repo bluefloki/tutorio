@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const http = require("http").createServer(app);
+const socketio = require("socket.io");
+const io = socketio(http);
 
 //Middleware
 app.use(express.json());
@@ -22,5 +25,9 @@ if (process.env.NODE_ENV == "production") {
   });
 }
 
+io.on("connection", (socket) => {
+  console.log("New web socket connection");
+});
+
 const port = 5000 || process.env.PORT;
-app.listen(port, () => console.log(`App is running on port ${port}`));
+http.listen(port, () => console.log(`App is running on port ${port}`));

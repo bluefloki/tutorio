@@ -32,3 +32,5 @@
 --> Implement Video chat
 --> Hire a bot to monitor the sharing of personal details
 --> Send emails and notifications
+--> Request a lesson => accepted or reject => Allows messaging => Allows appointments => Video chat and audio chat can only be initiated at the time of the lesson
+--> Allow recurring lessons. Students are charged as soon as they book a lesson
