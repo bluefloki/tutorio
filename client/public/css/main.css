@@ -7,6 +7,11 @@ form {
   margin: auto;
 }
 
+.button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @-webkit-keyframes spinAround {
   from {

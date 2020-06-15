@@ -18,6 +18,10 @@ form {
   margin: auto;
 }
 
+.button {
+  transition: 0.5s;
+}
+
 @import "./bulma-0.8.2/bulma.sass";
 
 th {
