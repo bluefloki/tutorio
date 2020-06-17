@@ -6,8 +6,8 @@ const io = socketio(http);
 
 //Middleware
 app.use(express.json());
-// const fileUpload = require("express-fileupload");
-// app.use(fileUpload());
+const fileUpload = require("express-fileupload");
+app.use(fileUpload());
 // const path = require("path");
 // if (process.env.NODE_ENV !== "production") {
 //   require("dotenv").config();

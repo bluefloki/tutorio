@@ -1,27 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 export default function SingleTutor() {
+  const [loading, setLoading] = useState(false);
   return (
     <div>
       <Navbar />
       <div className="container">
-        <figure className="image is-3by2">
-          <img src={require("../assets/uploads/2.jpg")} />
-        </figure>
+        <div className="columns is-paddingless" style={{ width: "100%" }}>
+          <div className="column is-9 is-paddingless">
+            <figure className="image">
+              <img src={require("../assets/uploads/2.jpg")} className="" />
+            </figure>
+          </div>
+          <div className="column has-background-dark has-text-white has-text-centered">
+            <figure className="image is-128x128">
+              <img
+                src={require("../assets/uploads/1.png")}
+                className="is-rounded"
+              />
+            </figure>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("request sent");
+              }}
+              className="my-5"
+            >
+              <button
+                type="submit"
+                onClick={() => setLoading(true)}
+                className={`button is-primary is-centered ${
+                  loading ? "is-loading" : ""
+                }`}
+              >
+                Request Lesson
+              </button>
+            </form>
+          </div>
+        </div>
         <div style={{ marginBottom: 55 }}>
           <h3 className="is-size-3 is-pulled-left">Piano Masterclass</h3>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              console.log("request sent");
-            }}
-            className="is-pulled-right"
-          >
-            <button type="submit" className="button is-primary is-pulled-right">
-              Request an appointment
-            </button>
-          </form>
         </div>
         <div>
           <p className="is-pulled-left">Music</p>

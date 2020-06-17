@@ -1,19 +1,14 @@
 @charset "utf-8";
 
-$primary: #3498db;
-$dark: #4b4b4b;
-$text: white;
-$link: hsl(0, 0%, 21%);
+$primary: #f13c20;
+$dark: #1f2833;
+$background: #e3e2df;
+$body-background-color: $background;
+$info: #ff6525;
+$link: white;
 $link-hover: $primary;
-$body-background-color: $dark;
-$strong-color: white;
-$info: #e44236;
 
-body {
-  min-height: 100vh;
-}
-
-form {
+.form-500 {
   width: 500px;
   margin: auto;
 }
@@ -22,9 +17,23 @@ form {
   transition: 0.5s;
 }
 
-@import "./bulma-0.8.2/bulma.sass";
+.nav-link {
+  transition: 0.5s;
+  color: white !important;
+  &:hover {
+    color: $primary !important;
+  }
+}
+
+@import "./bulma-0.9.0/bulma-0.9.0/bulma.sass";
 
 th {
   text-align: center !important;
   color: white !important;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./hero.jpg") center;
+  background-size: cover;
 }

@@ -21,7 +21,7 @@ export default function Tutors() {
                 </div>
                 <div className="column is-9">
                   <p className="is-size-5">
-                    <strong className="has-text-black">Meeran Kazmi</strong>
+                    <strong>Meeran Kazmi</strong>
                   </p>{" "}
                   <br />
                   <div>

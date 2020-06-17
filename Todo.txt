@@ -27,6 +27,14 @@
 -- UserId
 -- appointmentDateTime
 
+- Chat Room
+-- TutorId -> fk
+-- UserId -> fk
+
+- Chat Messages
+-- SenderId -> fk
+-- content
+
 CATEGORIES
 - Music
 - Software
