@@ -26,7 +26,7 @@ router.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email: req.body.email } });
     if (await bcrypt.compare(password, user.password)) {
-      const accessToken = jwt.sign({ email }, JSON_SECRET_KEY);
+      const accessToken = jwt.sign({ email, id: user.id }, JSON_SECRET_KEY);
       res.status(201).json({ accessToken, name: user.name, role: "user" });
     } else {
       res.status(400).json({ message: "Incorrect Password" });
@@ -58,7 +58,7 @@ router.post("/tutors/login", async (req, res) => {
     const { email, password } = req.body;
     const tutor = await Tutor.findOne({ where: { email: req.body.email } });
     if (await bcrypt.compare(password, tutor.password)) {
-      const accessToken = jwt.sign({ email }, JSON_SECRET_KEY);
+      const accessToken = jwt.sign({ email, id: tutor.id }, JSON_SECRET_KEY);
       res.status(201).json({ accessToken, name: tutor.name, role: "tutor" });
     } else {
       res.status(400).json({ message: "Incorrect Password" });

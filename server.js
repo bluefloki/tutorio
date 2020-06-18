@@ -15,6 +15,7 @@ app.use(fileUpload());
 
 //Routes
 app.use("/api/v1", require("./routes/api/indexRouter"));
+app.use("/api/v1/tutors", require("./routes/api/tutorRouter"));
 
 //Static files
 if (process.env.NODE_ENV == "production") {

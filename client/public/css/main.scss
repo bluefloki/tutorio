@@ -2,12 +2,12 @@
 
 $primary: #f13c20;
 $dark: #1f2833;
+$danger: #e84342;
 $background: #e3e2df;
 $body-background-color: $background;
 $info: #ff6525;
 $link: white;
 $link-hover: $primary;
-
 .form-500 {
   width: 500px;
   margin: auto;
@@ -23,6 +23,10 @@ $link-hover: $primary;
   &:hover {
     color: $primary !important;
   }
+}
+
+li {
+  list-style-type: none !important;
 }
 
 @import "./bulma-0.9.0/bulma-0.9.0/bulma.sass";

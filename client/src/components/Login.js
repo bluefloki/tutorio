@@ -7,7 +7,10 @@ export default function Login({ endpoint }) {
   //Set and render redirect
   const [redirect, setRedirect] = useState(false);
   const renderRedirect = () => {
-    if (redirect) return <Redirect to="/" />;
+    if (redirect) {
+      if (endpoint == "login") return <Redirect to="/" />;
+      else return <Redirect to="/tutorDashboard" />;
+    }
   };
 
   //Render Tutor Login
