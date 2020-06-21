@@ -1,9 +1,28 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function SingleTutor() {
-  const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("This works");
+    try {
+      await axios.post(
+        "/api/v1/lessonRequests",
+        { TutorId: 2 },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.accessToken}`,
+          },
+        }
+      );
+      alert("Request Sent");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -21,20 +40,8 @@ export default function SingleTutor() {
                 className="is-rounded"
               />
             </figure>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                console.log("request sent");
-              }}
-              className="my-5"
-            >
-              <button
-                type="submit"
-                onClick={() => setLoading(true)}
-                className={`button is-primary is-centered ${
-                  loading ? "is-loading" : ""
-                }`}
-              >
+            <form onSubmit={handleSubmit} className="my-5">
+              <button type="submit" className="button is-primary">
                 Request Lesson
               </button>
             </form>

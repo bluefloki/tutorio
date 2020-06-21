@@ -1,8 +1,9 @@
 export default (state, action) => {
   switch (action.type) {
-    case "SET_REDIRECT":
+    case "GET_LESSON_REQUESTS":
       return {
-        redirect: true,
+        ...state,
+        lessonRequests: action.payload,
       };
     default:
       return state;

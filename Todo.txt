@@ -31,6 +31,10 @@
 -- TutorId -> fk
 -- UserId -> fk
 
+- Requests
+-- TutorId -> fk
+-- UserId -> fk
+
 - Chat Messages
 -- SenderId -> fk
 -- content

@@ -27,7 +27,7 @@ export default function TutorNavbar() {
             </Link>
           </li>
           <li>
-            <Link to="/tutorDashboard/requests" className="is-size-5">
+            <Link to="/tutorDashboard/lessonRequests" className="is-size-5">
               <i className="fas fa-user-plus has-text-primary mr-2"></i>Lesson
               Requests
             </Link>

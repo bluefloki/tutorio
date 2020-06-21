@@ -26,7 +26,10 @@ router.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email: req.body.email } });
     if (await bcrypt.compare(password, user.password)) {
-      const accessToken = jwt.sign({ email, id: user.id }, JSON_SECRET_KEY);
+      const accessToken = jwt.sign(
+        { id: user.id, role: "user" },
+        JSON_SECRET_KEY
+      );
       res.status(201).json({ accessToken, name: user.name, role: "user" });
     } else {
       res.status(400).json({ message: "Incorrect Password" });
@@ -58,7 +61,10 @@ router.post("/tutors/login", async (req, res) => {
     const { email, password } = req.body;
     const tutor = await Tutor.findOne({ where: { email: req.body.email } });
     if (await bcrypt.compare(password, tutor.password)) {
-      const accessToken = jwt.sign({ email, id: tutor.id }, JSON_SECRET_KEY);
+      const accessToken = jwt.sign(
+        { id: tutor.id, role: "tutor" },
+        JSON_SECRET_KEY
+      );
       res.status(201).json({ accessToken, name: tutor.name, role: "tutor" });
     } else {
       res.status(400).json({ message: "Incorrect Password" });
@@ -66,17 +72,6 @@ router.post("/tutors/login", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(404).json({ message: "Cannot Find User" });
-  }
-});
-
-//GET ALL TUTORS
-router.get("/tutors", async (req, res) => {
-  try {
-    const allTutors = await Tutor.findAll();
-    res.status(200).json(allTutors);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Server Error" });
   }
 });
 

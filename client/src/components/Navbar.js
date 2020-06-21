@@ -98,9 +98,6 @@ export default function Navbar() {
             <Link to="/lessons" className="navbar-item nav-link">
               <i className="fas fa-laptop-code mr-1"></i>Lessons
             </Link>
-            <Link to="/tutors" className="navbar-item nav-link">
-              <i className="fas fa-user-tie mr-1"></i>Tutors
-            </Link>
           </div>
         </div>
         <div className="navbar-end">

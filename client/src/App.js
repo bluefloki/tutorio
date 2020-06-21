@@ -6,8 +6,6 @@ import HomePage from "./components/HomePage";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Classes from "./components/Classes";
-import Tutors from "./components/Tutors";
-import SingleTutor from "./components/SingleTutor";
 import Lessons from "./components/Lessons";
 import SingleLesson from "./components/SingleLesson";
 import Message from "./components/Message";
@@ -25,8 +23,6 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route path="/learn" component={Classes} />
-        <Route path="/tutors" component={Tutors} />
-        <Route path="/tutor/:id" component={SingleTutor} />
         <Route path="/lessons" component={Lessons} />
         <Route path="/lesson/:id" component={SingleLesson} />
         <Route path="/message/:id" component={Message} />
