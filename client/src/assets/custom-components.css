@@ -1,0 +1,14 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.has-tooltip .tooltip-text {
+  visibility: hidden;
+  text-align: center;
+  padding: 2px 6px;
+  position: absolute;
+  z-index: 100;
+}
+.has-tooltip:hover .tooltip-text {
+  visibility: visible;
+}

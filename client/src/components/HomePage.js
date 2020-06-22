@@ -1,42 +1,45 @@
 import React from "react";
+import { styles } from "../styles";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function HomePage() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("This works");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("this works");
   };
 
   return (
-    <section className="hero is-fullheight">
-      <div className="hero-head">
-        <Navbar />
-      </div>
-      <div className="hero-body">
-        <div className="container has-text-centered">
-          <h3 className="is-size-3 has-text-white" style={{ margin: 20 }}>
-            Learn at your own pace with personal tutors
+    <div style={{ height: "100vh" }}>
+      <Navbar isHomePage />
+      <div className="container mx-auto">
+        <div className="text-center relative" style={{ top: "25vh" }}>
+          <h3
+            className="text-3xl font-semibold mb-2 mx-auto"
+            style={{ width: 700 }}
+          >
+            Learn from anywhere, at your own pace, with personal tutors or
+            classes of upto five.
           </h3>
-          <form onSubmit={handleSubmit} className="form-500">
-            <div className="field">
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="search"
-                  placeholder="I want to Learn..."
-                />
-              </div>
+          <form onSubmit={handleSubmit}>
+            <div className="mt-6 mb-4">
+              <input
+                type="text"
+                name="search"
+                placeholder="I want to learn..."
+                className={styles.inputField}
+                style={{ width: "500px" }}
+              />
             </div>
-            <div className="has-text-centered">
-              <button type="submit" className="button is-primary">
-                Go
+            <div>
+              <button type="submit" className={styles.button}>
+                Search <i className="fas fa-search ml-1"></i>
               </button>
             </div>
           </form>
         </div>
       </div>
-      <div className="hero-foot has-text-centered"></div>
-    </section>
+      <Footer />
+    </div>
   );
 }
