@@ -44,7 +44,7 @@ export const FooterLink = ({}) => {
       <Link to="/about">
         <i className="fas fa-question mx-2"></i>
       </Link>
-      <span class="tooltip-text bg-black text-white text-center px-6">
+      <span className="tooltip-text bg-black text-white text-center px-6">
         Look at this!
       </span>
     </button>

@@ -59,7 +59,8 @@ router.post("/tutors", async (req, res) => {
 router.post("/tutors/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    const tutor = await Tutor.findOne({ where: { email: req.body.email } });
+    console.log(req.body);
+    const tutor = await Tutor.findOne({ where: { email: email } });
     if (await bcrypt.compare(password, tutor.password)) {
       const accessToken = jwt.sign(
         { id: tutor.id, role: "tutor" },
