@@ -4,12 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    languages: DataTypes.ARRAY(DataTypes.STRING),
-    displayPicturePath: DataTypes.STRING,
-    categories: DataTypes.ARRAY(DataTypes.STRING),
-    bio: DataTypes.TEXT,
-    rating: DataTypes.FLOAT,
-    numberOfRatings: DataTypes.INTEGER
+    displayPicturePath: DataTypes.STRING
   }, {});
   Tutor.associate = function(models) {
     // associations can be defined here

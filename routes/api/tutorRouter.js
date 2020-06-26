@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Tutor = require("../../database/models").Tutor;
+// const Tutor = require("../../database/models").Tutor;
 const { checkAuthenticated } = require("./middleware/CheckAuthenticated");
 
 router.get("/hello", checkAuthenticated, async (req, res) => {

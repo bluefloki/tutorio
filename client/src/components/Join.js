@@ -10,12 +10,12 @@ export default function Join({ isTutor }) {
   const renderTutorButton = () => {
     if (!isTutor) {
       return (
-        <button className={`${styles.button} mt-8 px-4 mx-0`}>
-          <Link to="/teach">
+        <Link to="/teach">
+          <button className={`${styles.button} mt-10 px-4 mx-0`}>
             <i className="fas fa-chalkboard-teacher mr-2"></i>Tutors Join Here{" "}
             <i className="fas fa-arrow-right ml-1"></i>
-          </Link>
-        </button>
+          </button>
+        </Link>
       );
     }
   };

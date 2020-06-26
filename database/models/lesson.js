@@ -4,13 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     "Lesson",
     {
       title: DataTypes.STRING,
-      rate: DataTypes.INTEGER,
+      pricing: DataTypes.ARRAY(DataTypes.STRING),
+      languages: DataTypes.ARRAY(DataTypes.STRING),
       description: DataTypes.TEXT,
-      languages: DataTypes.STRING,
       videoUrl: DataTypes.STRING,
-      rating: DataTypes.FLOAT,
       totalRating: DataTypes.INTEGER,
-      numberOfRatings: DataTypes.INTEGER,
+      noOfRatings: DataTypes.INTEGER,
     },
     {}
   );

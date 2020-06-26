@@ -11,17 +11,23 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
       },
-      rate: {
-        type: Sequelize.INTEGER,
+      pricing: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+      },
+      languages: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
       },
       description: {
         type: Sequelize.TEXT,
       },
-      languages: {
-        type: Sequelize.STRING,
-      },
       videoUrl: {
         type: Sequelize.STRING,
+      },
+      totalRating: {
+        type: Sequelize.INTEGER,
+      },
+      noOfRatings: {
+        type: Sequelize.INTEGER,
       },
       TutorId: {
         type: Sequelize.INTEGER,
@@ -31,15 +37,6 @@ module.exports = {
         },
         onUpdate: "CASCADE",
         onDelete: "SET NULL",
-      },
-      rating: {
-        type: Sequelize.FLOAT,
-      },
-      totalRating: {
-        type: Sequelize.INTEGER,
-      },
-      numberOfRatings: {
-        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

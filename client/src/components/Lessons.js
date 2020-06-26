@@ -90,7 +90,7 @@ export const LessonCard = () => {
               className="h-16 w-16 rounded-full mx-auto"
             />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-2">
             <h3 className="text-xl font-semibold">Violin Masterclass</h3>
             <p className="text-lg text-gray-700 pt-1">Meeran Kazmi</p>
           </div>
@@ -102,6 +102,9 @@ export const LessonCard = () => {
           </div>
           <div className="text-center col-span-1">
             <h3 className="text-xl font-semibold">$45-65</h3>
+          </div>
+          <div className="text-center col-span-1">
+            <button className={`${styles.button}`}>Request</button>
           </div>
         </div>
       </div>

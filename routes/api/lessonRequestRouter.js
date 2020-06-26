@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const LessonRequest = require("../../database/models").LessonRequest;
+// const LessonRequest = require("../../database/models").LessonRequest;
 const { checkAuthenticated } = require("./middleware/CheckAuthenticated");
 
 //CREATE LESSON REQUEST

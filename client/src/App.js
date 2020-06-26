@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import Join from "./components/Join";
 import Lessons from "./components/Lessons";
+import TutorDashboard from "./components/Tutor/TutorDashboard";
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
           />
           <Route path="/lessons" component={Lessons} />
         </div>
+        {/*Tutor Routes */}
+        <Route path="/tutors" component={TutorDashboard} />
       </Router>
     </GlobalProvider>
   );

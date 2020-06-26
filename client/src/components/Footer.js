@@ -1,52 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 
 const links = [
-  { id: 1, title: "About", href: "/about" },
-  { id: 2, title: "Terms & Conditions", href: "/about" },
-  { id: 3, title: "Privacy Policy", href: "/about" },
-  { id: 4, title: "Teacher Join Here", href: "/teach" },
+  { id: 1, title: "About", href: "/about", icon: "fa-question" },
+  { id: 2, title: "Terms & Conditions", href: "/about", icon: "fa-scroll" },
+  { id: 3, title: "Privacy Policy", href: "/about", icon: "fa-lock" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="text-center relative" style={{ top: "60vh" }}>
-      <div className="flex-center flex-row">
+    <footer className="relative" style={{ top: "55vh" }}>
+      <div className="flex flex-row justify-center">
         {links.map((link) => {
-          return;
+          return <FooterLink id={link.id} link={link} />;
         })}
-        <FooterLink />
-        <button className={styles.fullRoundButton}>
-          <Link to="/about">
-            <i className="fas fa-scroll mx-2"></i>
-          </Link>
-        </button>
-        <button className={styles.fullRoundButton}>
-          <Link to="/about">
-            <i className="fas fa-lock mx-2"></i>
-          </Link>
-        </button>
-        <button className={styles.fullRoundButton}>
-          <Link to="/teach">
-            <i className="fas fa-chalkboard-teacher mx-2"></i>
-          </Link>
-        </button>
       </div>
-      <p className="text-lg">Tutorio &copy; 2020</p>
+      <p className="text-lg text-center">Tutorio &copy; 2020</p>
     </footer>
   );
 }
 
-export const FooterLink = ({}) => {
+export const FooterLink = ({ link: { title, href, icon } }) => {
+  const [tooltip, toggleTooltip] = useState(false);
+  const renderTitle = () => {
+    if (tooltip) return <p className="text-center absolute">{title}</p>;
+  };
   return (
-    <button className={`${styles.fullRoundButton} has-tooltip`}>
-      <Link to="/about">
-        <i className="fas fa-question mx-2"></i>
-      </Link>
-      <span className="tooltip-text bg-black text-white text-center px-6">
-        Look at this!
-      </span>
-    </button>
+    <div>
+      <div className="mb-6">{renderTitle()}</div>
+      <button
+        className={`${styles.fullRoundButton} has-tooltip`}
+        onMouseEnter={() => toggleTooltip(true)}
+        onMouseLeave={() => toggleTooltip(false)}
+      >
+        <Link to={href}>
+          <i className={`fas ${icon} mx-2`}></i>
+        </Link>
+      </button>
+    </div>
   );
 };

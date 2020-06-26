@@ -1,37 +1,25 @@
-- Tutor
--- name
--- email
--- password
--- phone number
--- country
--- languages
--- qualifications
--- DP -> Optional
--- rating
--- categories
--- Bio
-
-- Class
+- Lesson
 -- title
--- price
--- duration
+-- pricing = array of objects(JSON.Stringify)
 -- tutor -> fk
+-- languages
 -- Description
--- Cover photo -> Optional
 -- Introduction Video -> Optional
--- rating
--- category
+-- totalRating
+-- noOfReviews
+
+- Schedule === ChatRooms
+-- LessonId -> fk
+-- TutorId -> fk
+-- timing
+-- students
 
 - Appointment
--- TutorId
--- UserId
--- appointmentDateTime
-
-- Chat Room
--- TutorId -> fk
--- UserId -> fk
+-- LessonId -> fk
+-- appointmentTime
 
 - Requests
+-- LessonId -> fk
 -- TutorId -> fk
 -- UserId -> fk
 
@@ -39,24 +27,9 @@
 -- SenderId -> fk
 -- content
 
-CATEGORIES
-- Music
-- Software
-- Design
-- Language
-- Fitness
-- Cooking
-- Art
-- Film
-- Business
-- Consultancy
-- Other
 
-
---> Implement Authentication with JWT
+--> Do some validation
 --> Start making the chat app
 --> Implement Video chat
 --> Hire a bot to monitor the sharing of personal details
 --> Send emails and notifications
---> Request a lesson => accepted or reject => Allows messaging => Allows appointments => Video chat and audio chat can only be initiated at the time of the lesson
---> Allow recurring lessons. Students are charged as soon as they book a lesson

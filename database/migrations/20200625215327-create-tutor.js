@@ -17,23 +17,8 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      languages: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
-      },
       displayPicturePath: {
         type: Sequelize.STRING
-      },
-      categories: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
-      },
-      bio: {
-        type: Sequelize.TEXT
-      },
-      rating: {
-        type: Sequelize.FLOAT
-      },
-      numberOfRatings: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
